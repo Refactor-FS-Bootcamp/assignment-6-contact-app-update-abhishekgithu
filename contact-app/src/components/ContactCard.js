@@ -20,11 +20,10 @@ const ContactCard = (props) => {
         onClick={() => props.clickHandler(id)}
       ></i>
       <span>
-      <i
-        className="edit outline icon"
-        style={{ color: "red" }}
-       
-      ></i>
+        <Link to="/add">
+        <i className="edit outline icon" style={{ color: "red" }}
+        onClick={() => props.updateHandler(id)}></i>
+        </Link>
       </span>
     </div>
   );

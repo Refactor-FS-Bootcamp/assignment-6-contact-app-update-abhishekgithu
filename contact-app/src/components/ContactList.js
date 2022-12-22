@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import ContactCard from "./ContactCard";
 
 const ContactList = (props) => {
-  const deleteHandler = (id) => props.getContactId(id);
+  const deleteHandler = (id) => 
+  props.getContactId(id);
+
+  const editHandler = (id) =>
+  props.getContactId(id);
 
   return (
     <div className="main">
@@ -17,6 +21,7 @@ const ContactList = (props) => {
             key={contact.id}
             contact={contact}
             clickHandler={deleteHandler}
+            updateHandler={editHandler}
           />
         ))}
       </div>
